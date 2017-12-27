@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B3BE4522F307C5EFBF54A039 /* Pods_PostApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EDF0EA84B2E558E840D19F2 /* Pods_PostApp.framework */; };
 		B76FDA131FF3CDE70026C4B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76FDA121FF3CDE70026C4B0 /* AppDelegate.swift */; };
 		B76FDA151FF3CDE70026C4B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76FDA141FF3CDE70026C4B0 /* ViewController.swift */; };
 		B76FDA181FF3CDE70026C4B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B76FDA161FF3CDE70026C4B0 /* Main.storyboard */; };
 		B76FDA1A1FF3CDE70026C4B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B76FDA191FF3CDE70026C4B0 /* Assets.xcassets */; };
 		B76FDA1D1FF3CDE70026C4B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B76FDA1B1FF3CDE70026C4B0 /* LaunchScreen.storyboard */; };
+		B79D16C91FF3E31000FC3A9D /* PostToFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79D16C81FF3E31000FC3A9D /* PostToFB.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7EDF0EA84B2E558E840D19F2 /* Pods_PostApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PostApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B76FDA0F1FF3CDE70026C4B0 /* PostApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PostApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B76FDA121FF3CDE70026C4B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B76FDA141FF3CDE70026C4B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,9 @@
 		B76FDA191FF3CDE70026C4B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B76FDA1C1FF3CDE70026C4B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B76FDA1E1FF3CDE70026C4B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B79D16C81FF3E31000FC3A9D /* PostToFB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostToFB.swift; sourceTree = "<group>"; };
+		C1EB6419E16070B12EF39B96 /* Pods-PostApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PostApp/Pods-PostApp.debug.xcconfig"; sourceTree = "<group>"; };
+		DE294A7EB65D0BA18923329D /* Pods-PostApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-PostApp/Pods-PostApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,45 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3BE4522F307C5EFBF54A039 /* Pods_PostApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6AF933F21F33E4186596921A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C1EB6419E16070B12EF39B96 /* Pods-PostApp.debug.xcconfig */,
+				DE294A7EB65D0BA18923329D /* Pods-PostApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B560A19B21722D0E6FD1CF42 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7EDF0EA84B2E558E840D19F2 /* Pods_PostApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B7627ABE1FF3D12900CCAC55 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B76FDA141FF3CDE70026C4B0 /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		B76FDA061FF3CDE70026C4B0 = {
 			isa = PBXGroup;
 			children = (
 				B76FDA111FF3CDE70026C4B0 /* PostApp */,
 				B76FDA101FF3CDE70026C4B0 /* Products */,
+				6AF933F21F33E4186596921A /* Pods */,
+				B560A19B21722D0E6FD1CF42 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +88,23 @@
 		B76FDA111FF3CDE70026C4B0 /* PostApp */ = {
 			isa = PBXGroup;
 			children = (
+				B79D16C71FF3E2FD00FC3A9D /* Utilities */,
+				B7627ABE1FF3D12900CCAC55 /* ViewController */,
 				B76FDA121FF3CDE70026C4B0 /* AppDelegate.swift */,
-				B76FDA141FF3CDE70026C4B0 /* ViewController.swift */,
 				B76FDA161FF3CDE70026C4B0 /* Main.storyboard */,
 				B76FDA191FF3CDE70026C4B0 /* Assets.xcassets */,
 				B76FDA1B1FF3CDE70026C4B0 /* LaunchScreen.storyboard */,
 				B76FDA1E1FF3CDE70026C4B0 /* Info.plist */,
 			);
 			path = PostApp;
+			sourceTree = "<group>";
+		};
+		B79D16C71FF3E2FD00FC3A9D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B79D16C81FF3E31000FC3A9D /* PostToFB.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +114,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B76FDA211FF3CDE70026C4B0 /* Build configuration list for PBXNativeTarget "PostApp" */;
 			buildPhases = (
+				4EBCF6839DDD671C4AF46D66 /* [CP] Check Pods Manifest.lock */,
 				B76FDA0B1FF3CDE70026C4B0 /* Sources */,
 				B76FDA0C1FF3CDE70026C4B0 /* Frameworks */,
 				B76FDA0D1FF3CDE70026C4B0 /* Resources */,
+				4ECD02A6C934149D6E1B0F60 /* [CP] Embed Pods Frameworks */,
+				6168CB48B8E4C6820C6C21AD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,11 +177,82 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4EBCF6839DDD671C4AF46D66 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PostApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4ECD02A6C934149D6E1B0F60 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PostApp/Pods-PostApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PostApp/Pods-PostApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6168CB48B8E4C6820C6C21AD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PostApp/Pods-PostApp-resources.sh",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PostApp/Pods-PostApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B76FDA0B1FF3CDE70026C4B0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B79D16C91FF3E31000FC3A9D /* PostToFB.swift in Sources */,
 				B76FDA151FF3CDE70026C4B0 /* ViewController.swift in Sources */,
 				B76FDA131FF3CDE70026C4B0 /* AppDelegate.swift in Sources */,
 			);
@@ -272,11 +389,13 @@
 		};
 		B76FDA221FF3CDE70026C4B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1EB6419E16070B12EF39B96 /* Pods-PostApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YTNY3D3G85;
 				INFOPLIST_FILE = PostApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Daniel.PostApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -287,11 +406,13 @@
 		};
 		B76FDA231FF3CDE70026C4B0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE294A7EB65D0BA18923329D /* Pods-PostApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YTNY3D3G85;
 				INFOPLIST_FILE = PostApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Daniel.PostApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
